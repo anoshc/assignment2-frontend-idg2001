@@ -18,7 +18,7 @@
 
         <!-- Upload file form, only accepting vcard and vcf format -->
         <h2>Upload Vcard </h2>
-        <form action="http://127.0.0.1:3000/contacts" method="POST" enctype="multipart/form-data"
+        <form method="POST" enctype="multipart/form-data" onsubmit="uploadFile(event)"
             accept=".vcf, application/vcard, application/x-vcard text/vcard, text/x-vcard">
             <p><input type="file" name="file" id="file"></p>
             <p><input type="submit" value="Upload"></p>
@@ -28,7 +28,12 @@
         <h2>Download all vcards from the database</h2>
         <button onclick="downloadData()">Download data</button>
     </main>
-    <script src="./index.js"></script>
+    <script src="./download.js"></script>
+    <script src="./upload.js"></script>
+    <!-- Axios import -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
