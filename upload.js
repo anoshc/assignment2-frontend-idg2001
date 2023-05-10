@@ -1,10 +1,10 @@
 // Function Upload File
 function uploadFile(event) {
-    const axios = require('axios/dist/browser/axios.cjs');
 
     event.preventDefault(); // prevent the form from submitting
 
     const fileInput = document.querySelector('#file');
+    console.log(fileInput);
     const file = fileInput.files[0];
     console.log(file);
 
@@ -17,10 +17,10 @@ function uploadFile(event) {
 
     axios.post(`${axioslocal}/formcontacts`, formData)
         .then(response => {
-            response.data.file
+            response.data
             console.log(response.data);
         })
         .catch(error => {
-            console.log(error);
+            console.log("Upload failed", error);
         });
 }
