@@ -6,17 +6,21 @@ function uploadFile(event) {
 
     const fileInput = document.querySelector('#file');
     const file = fileInput.files[0];
+    console.log(file);
 
     const formData = new FormData();
     formData.append('file', file);
 
-    axios.post('/legg til url og route her', formData)
+    // Switch between these two
+    const axioslocal = "http://127.0.0.1:3001"
+    const axiosurl = "https://cacheapi-idg2001.onrender.com"
+
+    axios.post(`${axioslocal}/formcontacts`, formData)
         .then(response => {
+            response.data.file
             console.log(response.data);
-            // do something with the response
         })
         .catch(error => {
             console.log(error);
-            // handle the error
         });
 }
