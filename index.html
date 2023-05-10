@@ -18,7 +18,7 @@
 
         <!-- Upload file form, only accepting vcard and vcf format -->
         <h2>Upload Vcard </h2>
-        <form method="POST" enctype="multipart/form-data" onsubmit="uploadFile(event)"
+        <form onsubmit="uploadFile(event)"
             accept=".vcf, application/vcard, application/x-vcard text/vcard, text/x-vcard">
             <p><input type="file" name="file" id="file"></p>
             <p><input type="submit" value="Upload"></p>
@@ -34,6 +34,10 @@
     <!-- Axios import -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <!-- dotenv import -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/dotenv@16.0.3/lib/main.min.js"></script> -->
+
 </body>
 
 </html>
