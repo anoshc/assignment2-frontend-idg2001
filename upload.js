@@ -15,7 +15,8 @@ function uploadFile(event) {
     const axioslocal = "http://127.0.0.1:3001"
     const axiosurl = "https://cacheapi-idg2001.onrender.com"
 
-    axios.post(`${axioslocal}/formcontacts`, formData, {
+    // Remember to change between axioslocal and axiosurl, if you are running it locally or not. 
+    axios.post(`${axiosurl}/formcontacts`, formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
           }
