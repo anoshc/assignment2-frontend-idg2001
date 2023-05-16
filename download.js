@@ -6,7 +6,7 @@ async function downloadData() {
         const axiosurl = "https://cacheapi-idg2001.onrender.com";
 
         // Send an axios get request
-        const response = await axios.get(`${axioslocal}/contacts_cache/vcard`, {
+        const response = await axios.get(`${axiosurl}/contacts_cache/vcard`, {
             responseType: 'blob'
         });
 
